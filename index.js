@@ -5,23 +5,23 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 async function populateTable() {
-    const { data, error } = await supabase.from('books').select('*');
+  const { data, error } = await supabase.from('books').select('*');
 
-    if (error) {
-      console.error('Error fetching books:', error.message);
-      return;
-    }
-
-    const tbody = document.querySelector('#booksTable tbody');
-    data.forEach(book => {
-      tbody.innerHTML += `
-        <tr>
-          <td>${book.Title}</td>
-          <td>${book.Author}</td>
-          <td>${book.ISBN}</td>
-        </tr>
-      `;
-    });
+  if (error) {
+    console.error('Error fetching books:', error.message);
+    return;
   }
 
-  populateTable();
+  const tbody = document.querySelector('#booksTable tbody');
+  data.forEach(book => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${book.Title}</td>
+      <td>${book.Author}</td>
+      <td>${book.ISBN}</td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
+populateTable();
