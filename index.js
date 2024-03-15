@@ -9,10 +9,15 @@ async function getBooks() {
   .from('books')
   .select('*')
 
-  for (let book of books) {
-    let bookList = document.getElementById('books');
-    bookList.innerHTML += `<li>${book.title} - ${book.author} - ${book.isbn}</li>`;
+  if (error) {
+    console.error('Error fetching books:', error.message);
+    return;
   }
+
+  let bookList = document.getElementById('books');
+  books.forEach(book => {
+    bookList.innerHTML += `<li>${book.title} - ${book.author} - ${book.isbn}</li>`;
+  });
 }
 
 getBooks();
