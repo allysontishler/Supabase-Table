@@ -7,7 +7,7 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 async function populateTable() {
   let { data: books, error } = await supabase
     .from('books')
-    .select('*');
+    .select('title, author, isbn');
 
   if (error) {
     console.error('Error fetching books:', error.message);
