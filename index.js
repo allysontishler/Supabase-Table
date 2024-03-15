@@ -5,7 +5,10 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 async function populateTable() {
-  const { data, error } = await supabase.from('books').select('*');
+  let { data: books, error } = await supabase
+    .from('books')
+    .select('*')
+
 
   if (error) {
     console.error('Error fetching books:', error.message);
