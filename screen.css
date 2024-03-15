@@ -1,3 +1,29 @@
-html {
-    background-color: #f5f5f5;
-}
+body {
+    background-color: #fffaf0; /* Eggshell white background for the website */
+  }
+  
+  .container {
+    width: 50%; /* Adjust the width as needed */
+    margin: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black; /* Border for the entire table */
+  }
+  
+  th, td {
+    border: 1px solid black; /* Border for table cells */
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #8b0000; /* Deep red background for column headers */
+    color: white; /* White text color for column headers */
+    font-weight: bold; /* Bold font for column headers */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Gray background for even rows */
+  }
