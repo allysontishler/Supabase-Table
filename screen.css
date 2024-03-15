@@ -1,23 +1,23 @@
 .container {
-    width: 50%; /* Adjust the width as needed */
+    width: 50%; 
     margin: auto;
   }
   
   table {
     width: 100%;
     border-collapse: collapse;
-    border: 2px solid black; /* Border for the entire table */
+    border: 2px solid black; 
   }
   
   th, td {
-    border: 1px solid black; /* Border for table cells */
+    border: 1px solid black; 
     padding: 8px;
   }
   
   th {
-    background-color: #8B0000; /* Deep red background for header row */
-    color: white; /* White text color for headers */
-    font-weight: bold; /* Bold font weight for headers */
+    background-color: #8B0000; 
+    color: white; 
+    font-weight: bold; 
   }
   
   tr:nth-child(even) {
