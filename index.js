@@ -19,9 +19,9 @@ async function populateTable() {
   data.forEach(book => {
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>${book.Title}</td>
-      <td>${book.Author}</td>
-      <td>${book.ISBN}</td>
+      <td>${book.title}</td>
+      <td>${book.author}</td>
+      <td>${book.isbn}</td>
     `;
     tbody.appendChild(row);
   });
