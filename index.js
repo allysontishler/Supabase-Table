@@ -19,7 +19,7 @@ async function getBooks() {
     books.forEach(book => {
       const row = document.createElement('tr');
       row.innerHTML = `
-        <td>${book.title}</td>
+        <td>${book.titles}</td>
         <td>${book.author}</td>
         <td>${book.isbn}</td>
       `;
